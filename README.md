@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://github.com/Boilrig/TorrentDog/blob/master/torrentdog_logo.png"/></a>
+    <img src="https://github.com/Boilrig/TorrentDog/blob/master/torrentdog_logo.png"/></a>
 </p>
 
 # TorrentDog

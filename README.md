@@ -17,7 +17,7 @@ This guide will specifically state what code needs to be changed in the docker c
 
 ### First Steps - NordVPN
 
-######Note: NordVPN has been chosen for both their P2P speed and their WireGuard implementation, allowing you to maximise performance with no loss of security.
+###### Note: NordVPN has been chosen for both their P2P speed and their WireGuard implementation, allowing you to maximise performance with no loss of security.
 
 
 Details that need to be changed.

@@ -19,7 +19,7 @@ This guide will specifically state what code needs to be changed in the docker c
 
 ###### Note: NordVPN has been chosen for both their P2P speed and their WireGuard implementation, allowing you to maximise performance with no loss of security.
 
-
+FIX BELOW
 Details that need to be changed.
 
 NordVPN Username
@@ -38,9 +38,12 @@ Use ```docker run --rm bubuntux/nordvpn sh -c "nordvpnd & sleep 1 && nordvpn cou
 CONNECT=us -g p2p
 ```
 We recommend that you check your countries servers to ensure that there are available P2P servers,  check ```docker run --rm bubuntux/nordvpn sh -c "nordvpnd & sleep 1 && nordvpn cities [country]``` for specific cities within countries, remembering to keep ```-g p2p```.
+FIX ABOVE
+
+Example Docker Script to connecting to a New Zealand P2P NordVPN Server
 ```
 docker run -ti --cap-add=NET_ADMIN --cap-add=SYS_MODULE --device /dev/net/tun --name vpn \
             --sysctl net.ipv4.conf.all.rp_filter=2 \
             -e USER=user@email.com -e PASS='pas$word' \
-            -e CONNECT=us -g p2p -e TECHNOLOGY=NordLynx -d bubuntux/nordvpn
+            -e CONNECT=nz -g p2p -e TECHNOLOGY=NordLynx -d bubuntux/nordvpn
 ```

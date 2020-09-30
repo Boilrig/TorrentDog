@@ -15,21 +15,29 @@ TorrentDog is a docker cluster bringing together multiple services in one place 
 
 This guide will specifically state what code needs to be changed in the docker commandlines, touching other settings will potentially invalidate the security practices TorrentDog recommends.
 
-### First Steps - NordVPN
+### First Steps - Setting up NordVPN
 
 ###### Note: NordVPN has been chosen for both their P2P speed and their WireGuard implementation, allowing you to maximise performance with no loss of security.
 
-FIX BELOW
-Details that need to be changed.
+#### Example Script (Connecting to a New Zealand NordVPN P2P Server)
+```
+docker run -ti --cap-add=NET_ADMIN --cap-add=SYS_MODULE --device /dev/net/tun --name vpn \
+            --sysctl net.ipv4.conf.all.rp_filter=2 \
+            -e USER=user@email.com -e PASS='pas$word' \
+            -e CONNECT=nz -g p2p -e TECHNOLOGY=NordLynx -d bubuntux/nordvpn
+```
 
-NordVPN Username
+#### Username and Password
 ```
 USER=user@email.com
 ```
-
-NordVPN Password (Keep within the quotes to provide special character issues)
 ```
 PASS='pas$word'
+```
+
+#### Location and Type of Server
+```
+CONNECT=us -g p2p
 ```
 
 Server and Type

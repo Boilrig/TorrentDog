@@ -29,7 +29,7 @@ docker run -ti --cap-add=NET_ADMIN --cap-add=SYS_MODULE --device /dev/net/tun --
 ```
 
 
-#### Username and Password
+#### Change your Username and Password
 ```
 USER=user@email.com
 ```
@@ -38,7 +38,7 @@ PASS='pas$word'
 ```
 
 
-#### Location and Type of Server
+#### Change your perferred Location.
 ```
 CONNECT=us -g p2p
 ```
